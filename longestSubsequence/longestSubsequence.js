@@ -11,10 +11,12 @@ class subsequence {
       }
     }
 
+    let x = arr.length - 1
     for (let i = Math.max.apply(null, lisArr); i > 0; i--) {
-      for (let j = arr.length - 1; j >= 0; j--) {
+      for (let j = x; j >= 0; j--) {
         if (lisArr[j] === i) {
           arrList.unshift(arr[j])
+          x = j
           break
         }
       }
